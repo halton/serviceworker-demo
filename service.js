@@ -1,10 +1,13 @@
 function debug(s) {
-  dump("NSM service.js: " + s + "\n");
+  dump("\n\nNSM service.js: " + s + "\n\n");
 }
 
 debug("Started");
 
 addEventListener("alarm", function(e) {
-  debug("GOT ALARM");
+  debug("GOT ALARM " + e.data);
 }, false);
 
+addEventListener("install", function(e) {
+  debug("INSTALLEDDDD");
+});

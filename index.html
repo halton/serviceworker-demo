@@ -8,7 +8,11 @@
         <textarea id="messages" rows="30" cols="80">
         </textarea>
         <script language="javascript" type="text/javascript">
-            navigator.mozAlarms.add(new Date(Date.now() + 1000), "honorTimezone");
+            navigator.registerServiceWorker("/*", "/service.js");
+            navigator.mozAlarms.add(new Date(Date.now() + 5000), "honorTimezone");
+            //Notification.requestPermission(function(p) {
+            //  var n = new Notification("Hi", {body: "foo"});
+            //  });
         </script>
     </body>
 </html>
